@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Phone Sensor</title>
+</head>
+
+<body>
+  <div>Alpha: <span id="alpha">0</span></div>
+  <div>Beta: <span id="beta">0</span></div>
+  <div>Gamma: <span id="gamma">0</span></div>
+</body>
+
+<script>
+
+  const listener = (e) => {
+    console.log(e)
+    document.getElementById('alpha').innerHTML = e.alpha
+    document.getElementById('beta').innerHTML = e.beta
+    document.getElementById('gamma').innerHTML = e.gamma
+  }
+
+  window.addEventListener('deviceorientation', listener)
+
+</script>
+
+</html>
